@@ -12,7 +12,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let fm = FileManager.default
+        print(fm, "fm")
+        
+        let path = Bundle.main.resourcePath!
+        print(path, "path")
+        
+        let items = try! fm.contentsOfDirectory(atPath: path)
+        print("items", items)
+        
+        for item in items {
+            if item.hasPrefix("nssl") {
+                print(item)
+            }
+        }
     }
 
 
