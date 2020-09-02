@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         // Bundle.main: Returns the bundle object that contains the current executable.
         
-        let path = Bundle.main.resourcePath! // ios app alwayshas resourcePath, but use ! for others
+        let path = Bundle.main.resourcePath! // ios app always has resourcePath, but use ! for others
         print(path, "path")
         
         let items = try! fm.contentsOfDirectory(atPath: path) // force try, can crash if can not try
@@ -44,3 +44,21 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pictures.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
+        print(indexPath, indexPath.row, "indexPath")
+        cell.textLabel?.text = pictures[indexPath.row]
+        return cell
+    }
+    
+    
+}
