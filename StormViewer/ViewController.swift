@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Storm Viewer"
+        // make large title like Setting app, scroll make it small
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         let fm = FileManager.default
         print(fm, "fm")
         
