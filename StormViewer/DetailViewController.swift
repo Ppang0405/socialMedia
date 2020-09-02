@@ -11,11 +11,14 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView! // may be there or it may not be there, but we're certain it definitely will be there by the time we want to use it.
+    var selectedImage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let imageToLoad = selectedImage {
+            imageView.image = UIImage(named: imageToLoad)
+        }
     }
     
 

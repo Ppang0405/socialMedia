@@ -78,7 +78,7 @@
 		483E199F24FE955C00718E10 /* StormViewer */ = {
 			isa = PBXGroup;
 			children = (
-				48E17AE824FF531E00583C62 /* Support Files */,
+				48E17AEB24FF5D3F00583C62 /* New Group */,
 				483E19A424FE955C00718E10 /* ViewController.swift */,
 				48E17AE624FF4F6100583C62 /* DetailViewController.swift */,
 				483E19A624FE955C00718E10 /* Main.storyboard */,
@@ -104,7 +104,7 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
-		48E17AE824FF531E00583C62 /* Support Files */ = {
+		48E17AEB24FF5D3F00583C62 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 				483E19A024FE955C00718E10 /* AppDelegate.swift */,
@@ -113,7 +113,7 @@
 				483E19AB24FE955F00718E10 /* LaunchScreen.storyboard */,
 				483E19AE24FE955F00718E10 /* Info.plist */,
 			);
-			path = "Support Files";
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
