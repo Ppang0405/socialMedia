@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         title = selectedImage
-        // navigationItem is own config of own screen
+        // navigationItem is navigationOptions of own screen
         navigationItem.largeTitleDisplayMode = .never
 
         if let imageToLoad = selectedImage {
